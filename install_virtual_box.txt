@@ -1,0 +1,48 @@
+#download virtualbox debian file from virtualbox website
+taib@taib-stoner:~/Documents/Networking_Install_Files$
+sudo dpkg -i virtualbox-7.0_7.0.14-161095~Ubuntu~jammy_amd64.deb
+
+#after installing eve-ng .ovf file it will error then command this
+taib@taib-stoner:~/Documents/Networking_Install_Files$ 
+sudo apt install --reinstall linux-headers-$(uname --kernel-release) virtualbox-dkms dkms
+
+taib@taib-stoner:~/Documents/Networking_Install_Files$ 
+sudo modprobe vboxdrv
+
+taib@taib-stoner:~/Documents/Networking_Install_Files$ 
+vboxmanage list vms
+
+taib@taib-stoner:~/Documents/Networking_Install_Files$ 
+VBoxManage modifyvm "EVE-CE" --nested-hw-virt on
+
+#mikrotik os iso file download and follow eve-ng -> documentation -> how to create images ->
+#mikrotix routeros
+ 
+#open virtual box window application and enable "Enable nested VT-x/AMD-V"
+#settings -> systems -> processor
+#follow commands bellow
+taib@taib-stoner:~/Documents/Networking_Install_Files$ 
+sudo apt install --reinstall linux-headers-$(uname --kernel-release) virtualbox-dkms dkms
+taib@taib-stoner:~/Documents/Networking_Install_Files$ 
+sudo modprobe vboxdrv
+taib@taib-stoner:~/Documents/Networking_Install_Files$ 
+vboxmanage list vms
+taib@taib-stoner:~/Documents/Networking_Install_Files$ 
+VBoxManage modifyvm "EVE-CE" --nested-hw-virt on
+
+ 
+#follow the command bellow
+root@eve-ng~:
+mkdir /opt/unetlab/addons/qemu/mikrotik-6.40.4/
+
+root@eve-ng~:
+cd /opt/unetlab/addons/qemu/mikrotik-6.40.4/
+
+#open winscp window application and give ip host and password,which collected from eve-ng
+#drag and drop mikrotik router os left to right 
+
+root@eve-ng~:
+mv chr-6.40.4.img hda.qcow2
+root@eve-ng~:
+/opt/unetlab/wrappers/unl_wrapper -a fixpermissions
+
