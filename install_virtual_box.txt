@@ -19,7 +19,7 @@ VBoxManage modifyvm "EVE-CE" --nested-hw-virt on
 #mikrotix routeros
  
 #open virtual box window application and enable "Enable nested VT-x/AMD-V"
-#settings -> systems -> processor
+#settings -> systems -> processor -> Enable nested VT-x/AMD-V -> on
 #follow commands bellow
 taib@taib-stoner:~/Documents/Networking_Install_Files$ 
 sudo apt install --reinstall linux-headers-$(uname --kernel-release) virtualbox-dkms dkms
@@ -45,4 +45,3 @@ root@eve-ng~:
 mv chr-6.40.4.img hda.qcow2
 root@eve-ng~:
 /opt/unetlab/wrappers/unl_wrapper -a fixpermissions
-
