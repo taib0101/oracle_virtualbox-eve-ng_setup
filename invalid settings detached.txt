@@ -1,0 +1,8 @@
+#setup BIOS and follow below
+#1.system configuration or virtual system
+#make them enable
+
+#-----------------------------------------------------
+#in virtualbox window go settings and follow below
+#make all system in range of green portion
+#graphics controller enable VMSVGA
