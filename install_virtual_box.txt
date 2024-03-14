@@ -45,3 +45,6 @@ root@eve-ng~:
 mv chr-6.40.4.img hda.qcow2
 root@eve-ng~:
 /opt/unetlab/wrappers/unl_wrapper -a fixpermissions
+#then follow linux client side and also in eve-ng download part
+#download eve-ng intrigation
+#download winehq-stable ,winscp
