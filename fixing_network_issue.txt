@@ -1,0 +1,33 @@
+##how to fix a start job is running for wait for network to be configured
+#goto virtualbox->settings->network->adapter 1->attached to-> bridge     
+#adapter and, name -> enp7s0 | wlp6s0
+#$sudo apt-get update
+#$sudo apt-get upgrade --fix-missing
+#$sudo nano /etc/resolv.conf
+#write nameserver 8.8.8.8 in resolv.conf file
+#reboot
+#$ping 8.8.8.8
+#$sudo apt install network-manager
+#$sudo apt install resolv.conf
+#sudo nano /etc/netplan/00-installer-config.yaml
+#############################################
+#network:                                   #
+# ethernets:				    #
+#   pnet0: 				    #
+#	dhcp4: true		            #
+# version: 2			            #
+#					    #
+#					    #
+#					    #
+#					    #
+#					    #
+#############################################
+#$sudo netplan try
+#$sudo netplan apply
+#$sudo systemctl start NetworkManager
+#$sudo systemctl start resolv.conf
+#$sudo systemctl enable NetworkManager
+#$sudo systemctl enable resolv.conf
+#goto virtualbox->settings->network->adapter 1->attached to-> host-only-
+#adapter and, name -> vboxnet0 
+#or you use by cli command bellow
