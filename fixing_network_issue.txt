@@ -14,7 +14,8 @@
 #network:                                   #
 # ethernets:				    #
 #   pnet0: 				    #
-#	dhcp4: true		            #
+#	     dhcp4: true		            #
+#      optional: true
 # version: 2			            #
 #					    #
 #					    #
